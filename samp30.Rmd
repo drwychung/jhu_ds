@@ -1,0 +1,53 @@
+---
+title: "Testing the Myth of Sample Size 30"
+author: "W Chung"
+date: "2023-09-25"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The Myth of "Sufficiently Large" 
+
+- The Central Limit Theorem (CLT) states that when the sample size 
+is "sufficiently large," regardless of the population distribution, 
+the distribution of the sample means will be normally distributed. 
+
+- Many textbooks claimed that sample size of 30 or more is sufficiently 
+large.'
+
+- HOWEVER, many statisticians challenge this 30+ rule of thumb, arguing 
+that it "has no valid justification, and can lead to seriously flawed 
+inferences" (https://en.wikipedia.org/wiki/Central_limit_theorem) 
+
+
+## Empirical Test of the 30+ Rule 
+
+- The new Shiny app tests the myth of the 30+ rule. 
+
+- Select the sample size. 
+
+- The app will randomly draw 500 samples of the specified 
+sample size from the Poisson distribution (lambda = 1, 
+highly skewed, not normal).
+
+- It will plot the distribution of the means on the right panel 
+and show the Shapiro-Wilks normality test results. 
+
+- This app is available on the next slide and also at 
+https://sandboxserver.shinyapps.io/testsamp30/
+
+
+## Interactive ShinyApp
+
+<iframe src="https://sandboxserver.shinyapps.io/testsamp30/"
+   width="100%" height=500px ></iframe> 
+
+## Thank you 
+
+THANK YOU! 
+
+- HINT: The sample size needs to be around 100 or more for the distribution of the means to be somewhat reliably normal. 
+
